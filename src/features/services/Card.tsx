@@ -12,8 +12,8 @@ function Card({title,skills}:CardProps){
     <Box  className='rounded-3xl py-4 w-72 h-auto flex flex-col items-center gap-5 shadow-xl shadow-purple-950 dark:shadow-purple-900 border-2 border-purple-900 dark:border-purple-700'>
     <div className='flex flex-col items-center'> {title}</div>
       <div className='flex flex-wrap gap-2 justify-center'>
-       {skills.map((data)=>{
-        return <CircularLogo logo={data} className='p-3 border-2 border-purple-900 dark:border-purple-700'/>
+       {skills.map((data,index)=>{
+        return <CircularLogo key={index} logo={data} className='p-3 border-2 border-purple-900 dark:border-purple-700'/>
 
       
        })}

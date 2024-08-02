@@ -7,7 +7,7 @@ const ProjectCard = ({taskCompleted, name, type, technologiesUsed, description, 
       <div className="md:flex">
         <div className="md:flex-shrink-0">
           {images.map((image, index) => (
-            <img className="h-48 w-full object-cover md:h-full md:w-48" src={image} alt={`${name} screenshot ${index + 1}`} key={index} />
+            <img  className="h-48 w-full object-cover md:h-full md:w-48" src={image} alt={`${name} screenshot ${index + 1}`} key={index} />
           ))}
         </div>
         <div className="p-8">
@@ -28,7 +28,7 @@ const ProjectCard = ({taskCompleted, name, type, technologiesUsed, description, 
           <ul className=' list-disc font-cursive text-gray-700 dark:text-gray-200'>
             {taskCompleted.map((task,index)=>
             {
-              return <li className='font-cursive'>{task}</li>
+              return <li key={index} className='font-cursive'>{task}</li>
             })}
           </ul>
           <div className="mt-4">{urlbtns}</div>

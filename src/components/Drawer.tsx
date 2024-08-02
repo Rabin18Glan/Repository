@@ -32,8 +32,8 @@ const menus = [
     <div className={` ${className}`}>
       <Button onClick={toggleDrawer(true)} className={`${open?'hidden':''}`}><SegmentOutlined fontSize='large'/></Button>
 {open&& <div className='fixed h-auto w-30 bg-black'>
-    <ul>{menus.map((menu)=>{
-        return <li>{menu}</li>
+    <ul>{menus.map((menu,index)=>{
+        return <li key={index}>{menu}</li>
     })}</ul>
     </div>}
     </div>

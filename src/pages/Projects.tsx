@@ -24,7 +24,7 @@ const projects:ProjectProps[]=[{
   name:"Maruni Suppliers",
   type:'Ecommerce Platform',
   technologiesUsed:['react','laravel','mysql'],
-  images:['react-laravel.png'],
+  images:['./react-laravel.png'],
   description:"asdfadsfa",
   taskCompleted:[],
   urlbtns:<></>
@@ -35,7 +35,7 @@ const projects:ProjectProps[]=[{
   name:"Maruni Suppliers",
   type:'Ecommerce Platform',
   technologiesUsed:['react','laravel','mysql'],
-  images:['react-laravel.png'],
+  images:['./react-laravel.png'],
   description:`This is the ecommerce website `,
   taskCompleted:['frontend development with react','backend with laravel'],
   urlbtns:<div className='flex gap-5'><FilledButton title='View Code' onClick={()=>{}}></FilledButton>
@@ -52,8 +52,8 @@ const projects:ProjectProps[]=[{
     <div className='flex flex-col xl:flex-row xl:flex-wrap xl:justify-center gap-20 '>
 
   
-      {projects.map((project:ProjectProps)=>{
-        return <ProjectCard images={project.images} type={project.type} description={project.description} technologiesUsed={project.technologiesUsed} name={project.name} urlbtns={project.urlbtns} taskCompleted={project.taskCompleted}/>
+      {projects.map((project:ProjectProps ,index)=>{
+        return <ProjectCard key={index} images={project.images} type={project.type} description={project.description} technologiesUsed={project.technologiesUsed} name={project.name} urlbtns={project.urlbtns} taskCompleted={project.taskCompleted}/>
           // return <Project name={project.name} type={project.type} technologiesUsed={project.technologiesUsed} images={project.images} description={project.description} urlbtns={project.urlbtns} />
         }
       )}
