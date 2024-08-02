@@ -30,8 +30,8 @@ function Services() {
             }`} > <TitleUnderLined title='Services'/></div>
             <div ref={ref} className={`flex flex-col md:flex-row md:flex-wrap md:justify-center gap-10 opacity-0 transition-opacity duration-1000  ${inView ? ' animate-slide-in-up opacity-100' : ''
             }`} >
-              {services.map((service) =>{
-                return <Card skills={service.skills} title={service.title}/>
+              {services.map((service,index) =>{
+                return <Card key={index} skills={service.skills} title={service.title}/>
               })}
             </div>
    </div>
