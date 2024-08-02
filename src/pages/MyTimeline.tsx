@@ -74,7 +74,7 @@ export default function MyTimeline() {
     <Timeline position="alternate" className='w-full h-auto'>
  
       {timiline.map((data,index)=>{
-        return <TimelineItem>
+        return <TimelineItem key={index}>
 
         <TimelineOppositeContent ref={ref} className={`opacity-0 transition-opacity duration-1000  ${inView ? ' animate-slide-in-up opacity-100' : ''
             }`}
