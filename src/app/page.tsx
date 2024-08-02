@@ -104,7 +104,7 @@ function Root() {
               >
 
                 {pages.map((page)=>{
-                  return <MenuItem className='dark:text-purple-950 dark:bg-white  text-gray-900 hover:bg-purple-700 hover:text-white' onClick={handleClose}><a onClick={() => {handleScrollTo(page.page);}}>{page.title}</a></MenuItem>
+                  return <MenuItem key={page.id} className='dark:text-purple-950 dark:bg-white  text-gray-900 hover:bg-purple-700 hover:text-white' onClick={handleClose}><a onClick={() => {handleScrollTo(page.page);}}>{page.title}</a></MenuItem>
                 })}
         
               </Menu>
